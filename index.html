@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section id="Form-Section">
+      <div class="container form-container">
+        <!--  -->
+        <div class="form-box loginform">
+          <h2>Login</h2>
+          <form action="#">
+            <div class="input-box">
+              <input type="text" required placeholder="Username" />
+              <i class="fa fa-user"></i>
+            </div>
+            <div class="input-box">
+              <input type="password" required placeholder="Password" />
+              <i class="fa fa-lock"></i>
+            </div>
+            <div class="save-forget">
+              <label for=""> <input type="checkbox" /> Save This. </label>
+              <a href="">Forget Password?</a>
+            </div>
+            <button type="submit">Login</button>
+            <div class="registar-link">
+              <p>Don't have an account?</p>
+              <a href="" class="loginText">Registar</a>
+            </div>
+          </form>
+        </div>
+        <!--  -->
+        <div class="form-box SignUpform">
+            <h2>Sign Up</h2>
+            <form action="#">
+              <div class="input-box">
+                <input type="text" required placeholder="Username" />
+                <i class="fa fa-user"></i>
+              </div>
+              <div class="input-box">
+                <input type="email" required placeholder="Email" />
+                <i class="fa fa-message"></i>
+              </div>
+              <div class="input-box">
+                <input type="password" required placeholder="Password" />
+                <i class="fa fa-lock"></i>
+              </div>
+              <div class="save-forget">
+                <label for=""> <input type="checkbox" /> Accept This. </label>
+                <a href="">Terms and Conditions</a>
+              </div>
+              <button type="submit">Sign Up</button>
+              <div class="registar-link">
+                <p>Already have an account?</p>
+                <a href="" class="SingUpText">Login</a>
+              </div>
+            </form>
+        </div>
+      </div>
+      <!--  -->
+    </section>
+
+    <script>
+        let loginText = document.querySelector('.loginText');
+        let singUpText = document.querySelector('.SingUpText');
+        let FormWrapper = document.querySelector('.form-container');
+
+        loginText.addEventListener('click',(event)=>{
+            event.preventDefault();
+            FormWrapper.classList.add('SignUpform-Active');
+        });
+
+        singUpText.addEventListener('click',(event)=>{
+            event.preventDefault();
+            FormWrapper.classList.remove('SignUpform-Active');
+        });
+    </script>
+  </body>
+</html>
